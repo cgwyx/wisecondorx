@@ -2,6 +2,7 @@ FROM conda/miniconda3
 #FROM continuumio/miniconda3
 
 RUN conda update --all -y &&\
+    conda update -n base -c defaults conda &&\
     conda config --add channels bioconda &&\
     conda config --add channels conda-forge &&\
     conda config --add channels r &&\
